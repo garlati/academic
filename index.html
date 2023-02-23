@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>CV Flavio Garlati</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon2.png">
+    <!-- Cargar script para Chart-->
+    </head>
+<body>
+    <img src="images/garlatiprof.png" alt="Foto de Flavio Garlati" width="300"> 
+    <h1> La Psientrevista </h1>
+        <h2>¿Como te gusta presentarte?</h2>
+            <p> Soy Flavio Garlati, <strong> psicólogo </strong> y especializado en el área de evaluación psicológica aplicada al ámbito forense y <strong> capacitación profesional </strong> utilizando la tecnología como medio para fortalecer el aprendizaje</p>
+        <h2>¿A que te dedicas en el área de la psicología forense? </h2>
+            <p>Soy un <strong> perito </strong> de oficio o de sorteo siendo un auxiliar de la justicia en los juicios civiles y laborales</P>
+            <p>Y a nivel particular me dedico a trabajar como asesor psicológico forense realizando las siguientes tareas</p>
+            <ol>
+                <li> Asistencia a pericias</li>
+                <li> Asesoramiento en la confección de demandas</li>
+                <li> Perito de parte en las causas penales</li>
+                </ol>
+        <h2>¿Podrías explicar en que consiste el trabajo de un psicólogo que es perito de oficio?</h2>
+            <p>Es una temática bastante larga para explicar pero en el siguiente video podrían explorar algunas respuestas</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ydT2qg3Tto4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+        <h2> ¿Como combinas todo lo que sabes con la tecnología?</h2>
+            <p>
+            Siempre fui un apasionado por el uso de la tecnología y esto me permite incorporarla a los procesos de capacitación presencial (Prezi, Mentimeter) y virtual (Moodle, Zoom, Meet) que realizo. 
+            En este apartado también empecé a utilizar herramientas que me permiten organizar mi conocimiento (Canvas, Obsidian) y brindar una exposición más clara frente a mis estudiantes. 
+            Respecto del área de evaluación psicológica siempre busco incorporar herramientas psicométricas que posean alta confiabilidad y compararlas utilizando diferentes programas (Excel, SPSS).  
+            </p>
+        <h2> ¿Tienes alguna página oficial?</h2>
+            <p> Si tengo una página en Wordpress que desarrolle durante pandemia de manera autodidacta para mostrar mi trabajo alojada en mi web personal <a href="https://garlati.com.ar"> Garlati Web</a> </p>
+        <h2> ¿Cómo pueden ponerse en contacto contigo?</h2>
+            <p>Me pueden dejar sus datos personales y me contacto</p>
+                <form>
+                    <label for="nombre">Nombre/s:</label><br>
+                    <input type="text" id="nombre" name="nombre"><br>
+                    <label for="apellido">Apellido/s:</label><br>
+                    <input type="text" id="apellido" name="apellido"><br>
+                    <label for="celular">Celular:</label><br>
+                    <input type="text" id="celular" name="celular"><br>
+                </form>
+                <button type="button"> Enviar </button>
+        <h2>¿Cuales son tus conocimientos en general?</h2>
+            <p>Gráficamente lo podría resumir de la siguiente manera</p>
+<!--Crear barra de cada conocimiento-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.2.0/chart.min.js" integrity="sha512-qKyIokLnyh6oSnWsc5h21uwMAQtljqMZZT17CIMXuCQNIfFSFF4tJdMOaJHL9fQdJUANid6OB6DRR0zdHrbWAw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script scr="js/main.js"></script>
+
+    <div class="chart"></div>
+        <canvas id="Capacidades"></canvas>
+      </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
+    <script>
+    // setup 
+    const data = {
+      labels: ['Evaluación Psicológica', 'Capacitación', 'Tecnología', 'Programación', 'Inglés'],
+      datasets: [{
+        label: 'Capacidades',
+        data: [10, 9, 9, 5, 4],
+        borderWidth: 1
+      }]
+    };
+
+    // config 
+    const config = {
+      type: 'bar',
+      data,
+      options: {
+        indexAxis: 'y',
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    };
+
+    // render init block
+    const Capacidades = new Chart(
+      document.getElementById('Capacidades'),
+      config
+    );
+    </script>
+
+  </body>
+</body>
+</html>
